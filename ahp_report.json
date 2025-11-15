@@ -1,0 +1,41 @@
+{
+  "name": "shelter",
+  "global_weight": 1.0,
+  "local_weight": 1.0,
+  "target_weights": {
+    "flood_hazard": 0.218,
+    "river": 0.2,
+    "population": 0.173,
+    "roads": 0.157,
+    "health_facilities": 0.103,
+    "elevation": 0.05,
+    "market": 0.039,
+    "slope": 0.033,
+    "land_use": 0.027
+  },
+  "elements": {
+    "global_weights": {
+      "flood_hazard": 0.218,
+      "river": 0.2,
+      "population": 0.173,
+      "roads": 0.157,
+      "health_facilities": 0.103,
+      "elevation": 0.05,
+      "market": 0.039,
+      "slope": 0.033,
+      "land_use": 0.027
+    },
+    "local_weights": {
+      "flood_hazard": 0.218,
+      "river": 0.2,
+      "population": 0.173,
+      "roads": 0.157,
+      "health_facilities": 0.103,
+      "elevation": 0.05,
+      "market": 0.039,
+      "slope": 0.033,
+      "land_use": 0.027
+    },
+    "consistency_ratio": 0.075
+  }
+}
