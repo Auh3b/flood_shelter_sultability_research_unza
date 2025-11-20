@@ -9,6 +9,7 @@ class OAT:
         self.input = weight_dict
         self.values = None
         self.ids = None
+        self.dec_arr = None
         self._load_weight_dict()
 
     def _load_weight_dict(self):
@@ -19,16 +20,20 @@ class OAT:
 
         return self
 
-    def _per_dec(self, min, max, interval):
+    def _per_dec(self, min, max, interval, remove_idx=[]):
         per_range = list(range(min, max, interval))
-        per_range.pop(0)
+
+        if (len(remove_idx) > 0):
+            for idx in remove_idx:
+                per_range.pop(0)
+
         dec_arr = [x/100 for x in per_range]
-        print(dec_arr)
+        self.dec_arr = dec_arr
         return dec_arr
 
-    def solve(self, max, min, interval):
+    def solve(self, max, min, interval, remove_idx=[]):
         ids = self.ids
-        per_range = self._per_dec(min, max, interval)
+        per_range = self._per_dec(min, max, interval, remove_idx)
         _output = []
         for x in ids:
             _sub = []
